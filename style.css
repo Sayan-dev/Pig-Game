@@ -46,6 +46,54 @@ body {
 }
 
 
+.initialize-panel{
+    position: absolute;
+    background: #fff;
+    width: 500px;
+    height: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.input-maxscore{
+    border: none;
+    outline: none;
+    background: #f7f7f7;
+    font-size: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
+.btn-start{
+    display: block;
+    text-align: right;
+    background: #EB4D4D;
+    padding: 5px;
+    margin: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.block-panel{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(62, 20, 20, 0.7);
+    z-index: 20;
+}
+
+
 
 /**********************************************
 *** PLAYERS

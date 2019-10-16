@@ -11,6 +11,7 @@ GAME RULES:
 
 
 var scores,roundScore,activePlayer,gamePlay=true;
+var maxScore = 100;
 
 initialize();
 
@@ -48,7 +49,7 @@ document.querySelector(".btn-hold").addEventListener("click",function(){
                 document.querySelector("#score-" + activePlayer).textContent=scores[activePlayer];
                 //Winner is decided when the total is above 100
 
-                if(scores[activePlayer]>= 100){
+                if(scores[activePlayer]>= maxScore){
                         document.querySelector("#name-"+activePlayer).textContent="Winner!!";
 
                         document.querySelector(".dice").style.display="none";
@@ -89,6 +90,25 @@ function initialize(){
         scores=[0,0];
         roundScore=0;
         activePlayer=0;
+        document.querySelector(".block-panel").style.display="block";
+
+        document.querySelector(".btn-start").addEventListener("click",()=>{
+
+                inVal = document.querySelector(".input-maxscore").value;
+
+                if(!isNaN(inVal)){
+                        maxScore = parseInt(inVal) ;
+                } else{
+                        alert("Number invalid, using default 100");
+                }
+
+
+                console.log(maxScore);
+                
+                
+                document.querySelector(".block-panel").style.display="none";
+        });
+
         
         
         
