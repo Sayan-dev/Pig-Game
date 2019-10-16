@@ -24,7 +24,7 @@ document.querySelector(".btn-roll").addEventListener("click",function(){
                 //Display result
                 var domDice = document.querySelector(".dice")
                 domDice.style.display ="block";
-                domDice.src = "dice-"+ dice +".png";
+                domDice.src = "assets/dice-"+ dice +".png";
 
                 //Update content and if dice is 1 then turn changes
                 if (dice !==1){
